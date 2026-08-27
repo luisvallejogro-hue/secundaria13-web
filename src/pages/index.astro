@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Inicio | Secundaria No. 13 José María Luis Mora">
+	<!-- Hero Section -->
+	<section class="bg-blue-800 text-white py-20 px-4 text-center">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-4xl md:text-5xl font-bold mb-6">Bienvenidos a la Secundaria No. 13</h2>
+			<h3 class="text-2xl text-blue-200 mb-8">José María Luis Mora</h3>
+			<p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">Formando estudiantes responsables, solidarios y comprometidos con su comunidad mediante una educación pública de calidad, inclusiva y humanista.</p>
+		</div>
+	</section>
+
+	<!-- Misión y Visión -->
+	<section class="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+		<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+			<div class="w-12 h-12 bg-blue-100 text-blue-800 rounded-lg flex items-center justify-center mb-6">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-target"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+			</div>
+			<h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Misión</h3>
+			<p class="text-gray-600 leading-relaxed">
+				Brindar una educación pública de calidad, inclusiva y humanista, donde todos los estudiantes sean valorados, respetados con iguales oportunidades de desarrollo. Promoviendo permanentemente los valores de fraternidad, solidaridad, respeto, honestidad y empatía como principios fundamentales para construir una comunidad escolar unida, libre de discriminación, comprometida con el bienestar de cada integrante.
+			</p>
+		</div>
+		<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+			<div class="w-12 h-12 bg-blue-100 text-blue-800 rounded-lg flex items-center justify-center mb-6">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-eye"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+			</div>
+			<h3 class="text-2xl font-bold text-gray-800 mb-4">Nuestra Visión</h3>
+			<p class="text-gray-600 leading-relaxed">
+				Ser una escuela secundaria que ofrece una educación integral, inclusiva que busca fomentar la calidad educativa formando estudiantes responsables, solidarios, comprometidos con su comunidad. Aspiramos a construir un ambiente de respeto, fraternidad, igualdad y colaboración.
+			</p>
+		</div>
+	</section>
+
+	<!-- Valores -->
+	<section class="bg-gray-100 py-16 px-4">
+		<div class="max-w-6xl mx-auto">
+			<h3 class="text-3xl font-bold text-center text-gray-800 mb-12">Nuestros Valores</h3>
+			<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+				{[
+					{ nombre: 'Fraternidad', desc: 'Amistad o afecto entre hermanos.' },
+					{ nombre: 'Solidaridad', desc: 'Apoyar a quien lo necesite de forma desinteresada.' },
+					{ nombre: 'Respeto', desc: 'Valorar la dignidad y diferencias de los demás.' },
+					{ nombre: 'Honestidad', desc: 'Actuar con verdad y rectitud.' },
+					{ nombre: 'Empatía', desc: 'Comprender los sentimientos de otros.' },
+					{ nombre: 'Igualdad', desc: 'Mismos derechos sin discriminación.' },
+					{ nombre: 'Equidad', desc: 'Trato justo según necesidades específicas.' },
+					{ nombre: 'Libertad', desc: 'Obrar según propia voluntad con responsabilidad.' },
+					{ nombre: 'Justicia', desc: 'Dar a cada persona lo que le corresponde.' },
+					{ nombre: 'Tolerancia', desc: 'Aceptación de las ideas diferentes.' },
+					{ nombre: 'Colaboración', desc: 'Trabajar juntos para lograr una meta común.' },
+					{ nombre: 'Compromiso', desc: 'Responsabilidad de cumplir con acuerdos.' },
+				].map((valor) => (
+					<div class="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition">
+						<h4 class="font-bold text-blue-900 mb-2">{valor.nombre}</h4>
+						<p class="text-sm text-gray-600">{valor.desc}</p>
+					</div>
+				))}
+			</div>
+		</div>
+	</section>
+
+	<!-- Mensaje del Director -->
+	<section class="py-20 px-4 max-w-4xl mx-auto">
+		<div class="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-blue-100 relative overflow-hidden">
+			<div class="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-bl-full -z-0 opacity-50"></div>
+			<h3 class="text-3xl font-bold text-gray-800 mb-8 relative z-10">Mensaje del Director</h3>
+			<div class="prose prose-blue max-w-none text-gray-700 relative z-10 space-y-4">
+				<p><strong>Estimadas maestras, maestros y personal de nuestra institución:</strong></p>
+				<p>Con gran entusiasmo damos inicio a un nuevo ciclo escolar, una oportunidad para reencontrarnos, renovar nuestros propósitos y asumir juntos los retos que nos plantea la educación de nuestros estudiantes.</p>
+				<p>Quiero comenzar reconociendo y agradeciendo profundamente el compromiso, la dedicación y la vocación que cada uno de ustedes aporta a nuestra escuela. Ustedes son una fuerza valiosa de nuestra institución; son quienes, con su trabajo cotidiano, hacen posible que nuestra comunidad educativa avance, se fortalezca y deje huella en la vida de nuestros alumnos.</p>
+				<p>Cada ciclo representa también una oportunidad para aprender, innovar y crecer. Los invito a asumir este nuevo año con una actitud de mejora continua...</p>
+				<div class="mt-8 pt-8 border-t border-gray-100">
+					<p class="font-bold text-gray-900">Profr. José Luis Tovar Cantú</p>
+					<p class="text-blue-600">Director</p>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>

@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const personal = [
+  { nombre: "JOSÉ LUIS TOVAR CANTÚ", funcion: "Director" },
+  { nombre: "EDGAR ALAN ZAMBRANO CHAVEZ", funcion: "Subdirector" },
+  { nombre: "JOSÉ ANGEL ALMANZA SÁNCHEZ", funcion: "Docente" },
+  { nombre: "ROSSANA DINORAH ARREOLA CORPUS", funcion: "Docente" },
+  { nombre: "PETRA CAZARES FRANCO", funcion: "Docente" },
+  { nombre: "CLAUDIA LIZETH MARTÍNEZ VÁZQUEZ", funcion: "Docente" },
+  { nombre: "ERICK EDUARDO MORALES LÓPEZ", funcion: "Docente" },
+  { nombre: "CARLOS GERARDO RODRÍGUEZ NÚÑEZ", funcion: "Docente" },
+  { nombre: "SANTA CONTRERAS QUINTERO (CONTRATO)", funcion: "Docente" },
+  { nombre: "DULCE CAROLINA BARRIENTOS ESPINOZA (CONTRATO)", funcion: "Docente" },
+  { nombre: "LUIS IGNACIO PÉREZ RIVERA (CONTRATO)", funcion: "Docente" },
+  { nombre: "ERIKA GABRIELA MARTÍNEZ GÓMEZ", funcion: "Docente" },
+  { nombre: "MAESTRO NUEVO", funcion: "Docente" },
+  { nombre: "ARMANDO LOPEZ GARZA", funcion: "Prefecto" },
+  { nombre: "EDGAR ISRAEL LEAL SEGURA", funcion: "Administrativo" },
+  { nombre: "DIANA IRENE LEOS CANTÚ", funcion: "Administrativa" },
+  { nombre: "MARIA ROSA ESQUIVEL MÁRQUEZ (CONTRATO)", funcion: "Contraloria" },
+  { nombre: "ARELY OSORIO GARIN", funcion: "Bibliotecaria" },
+  { nombre: "MELISSA VILLARREAL LOPEZ", funcion: "Trabajo Social" },
+  { nombre: "JOSÉ GUADALUPE ÁLFARO MONCADA", funcion: "Intendente" },
+  { nombre: "JOSÉ ENRIQUE BAZALDUA GARZA", funcion: "Intendente" },
+  { nombre: "JULIA GALVAN OROZCO", funcion: "Intendente" },
+  { nombre: "INTENDENTE NUEVO (CONTRATO)", funcion: "Intendente" },
+  { nombre: "INTENDENTE NUEVO (CONTRATO)", funcion: "Intendente" }
+];
+---
+
+<Layout title="Directorio | Secundaria No. 13">
+	<div class="bg-blue-900 py-12 px-4 text-center text-white">
+		<h2 class="text-3xl md:text-4xl font-bold mb-4">Directorio del Personal</h2>
+		<p class="text-blue-200">Ciclo Escolar 2026 - 2027</p>
+	</div>
+
+	<section class="py-16 px-4 max-w-6xl mx-auto">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+			{personal.map((persona) => (
+				<div class="bg-white border border-gray-100 rounded-xl p-6 shadow-sm hover:shadow-md transition flex flex-col items-center text-center">
+					<div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mb-4 text-gray-400">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+					</div>
+					<h3 class="font-bold text-gray-900 text-sm mb-1">{persona.nombre}</h3>
+					<span class="text-xs font-medium px-2.5 py-1 bg-blue-100 text-blue-800 rounded-full">{persona.funcion}</span>
+				</div>
+			))}
+		</div>
+	</section>
+</Layout>
