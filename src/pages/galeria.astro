@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import fs from 'node:fs';
+import path from 'node:path';
+
+// Leer todas las fotos de la carpeta public/galeria en tiempo de construcción
+const galeriaPath = path.join(process.cwd(), 'public', 'galeria');
+let files = [];
+try {
+  files = fs.readdirSync(galeriaPath).filter(f => f.startsWith('foto_'));
+} catch (e) {
+  console.error("Error leyendo directorio de galeria", e);
+}
+---
+
+<Layout title="Vida Escolar | Secundaria No. 13">
+	<div class="relative bg-blue-900 py-20 px-4 text-center text-white overflow-hidden">
+		<div class="absolute inset-0 z-0">
+			<img src="/galeria/festival.png" alt="Fondo Vida Escolar" class="w-full h-full object-cover opacity-30" />
+		</div>
+		<div class="relative z-10 drop-shadow-md">
+			<h2 class="text-3xl md:text-5xl font-bold mb-4">Vida Escolar</h2>
+			<p class="text-blue-200 text-lg max-w-2xl mx-auto">Una mirada a las actividades, ceremonias y festividades que dan vida a nuestra comunidad educativa.</p>
+		</div>
+	</div>
+
+	<section class="py-16 px-4 max-w-7xl mx-auto">
+		<div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+			{files.map((file) => (
+				<div class="break-inside-avoid rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+					<img src={`/galeria/${file}`} alt="Fotografía de Vida Escolar" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+				</div>
+			))}
+		</div>
+	</section>
+</Layout>
