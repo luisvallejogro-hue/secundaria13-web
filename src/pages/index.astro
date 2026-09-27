@@ -15,6 +15,32 @@ import Layout from '../layouts/Layout.astro';
 		</div>
 	</section>
 
+	<!-- Avisos y Eventos Section -->
+	<section class="py-12 px-4 max-w-6xl mx-auto">
+		<div class="bg-white rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-gray-100">
+			<div class="md:w-1/2 bg-green-50 p-8 flex flex-col justify-center">
+				<div class="inline-block bg-red-600 text-white font-bold px-3 py-1 rounded-full text-sm mb-4 w-max">Próximo Evento</div>
+				<h3 class="text-3xl font-bold text-gray-800 mb-4">Asamblea de Septiembre</h3>
+				<p class="text-gray-600 mb-6 text-lg">Te invitamos a nuestra asamblea cívica correspondiente al mes patrio. ¡Habrá kermés y sorpresa artística!</p>
+				
+				<div class="space-y-3 mb-8">
+					<div class="flex items-center gap-3 text-gray-700">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/><path d="M16 18h.01"/></svg>
+						<span class="font-medium">Martes 29 de Septiembre, 09:30 AM</span>
+					</div>
+					<div class="flex items-center gap-3 text-gray-700">
+						<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-red-500"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+						<span>Plaza cívica de la institución</span>
+					</div>
+				</div>
+				<p class="font-bold text-gray-800 text-xl italic">¡Contamos con su asistencia!</p>
+			</div>
+			<div class="md:w-1/2 p-4 md:p-8 flex justify-center items-center bg-gray-50">
+				<img src="/eventos/asamblea_septiembre.png" alt="Póster Asamblea Septiembre" class="max-w-full h-auto rounded-xl shadow-md border border-gray-200" style="max-height: 500px;" />
+			</div>
+		</div>
+	</section>
+
 	<!-- Misión y Visión -->
 	<section class="py-16 px-4 max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
 		<div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">

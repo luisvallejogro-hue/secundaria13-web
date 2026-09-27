@@ -21,7 +21,7 @@ const { title } = Astro.props;
 		<header class="bg-blue-900 text-white shadow-md">
 			<div class="container mx-auto px-4 py-4 flex flex-col md:flex-row justify-between items-center gap-4">
 				<div class="flex items-center gap-4">
-					<img src="/logo.png" alt="Logo Secundaria 13" class="h-12 w-auto drop-shadow-md rounded-full bg-white p-1" />
+					<img src="/logo.jpg" alt="Logo Secundaria 13" class="h-12 w-12 object-cover drop-shadow-md rounded-full bg-white p-0.5" />
 					<div>
 						<h1 class="text-xl font-bold leading-tight">Secundaria No. 13</h1>
 						<p class="text-sm text-blue-200">José María Luis Mora</p>
@@ -37,9 +37,15 @@ const { title } = Astro.props;
 		<main class="flex-grow">
 			<slot />
 		</main>
-		<footer class="bg-gray-800 text-white text-center py-6 mt-12">
-			<p class="text-sm text-gray-400">© 2026 Escuela Secundaria No. 13 "José María Luis Mora"</p>
-			<p class="text-sm text-gray-400">Calle Olivo S/N, Col. Jardines de la Moderna, Monterrey, N.L. | Tel.- 8183 541117</p>
+		<footer class="bg-gray-800 text-white text-center py-8 mt-12">
+			<div class="container mx-auto px-4">
+				<p class="text-sm text-gray-400 mb-2">© 2026 Escuela Secundaria No. 13 "José María Luis Mora"</p>
+				<p class="text-sm text-gray-400 mb-4">Calle Olivo S/N, Col. Jardines de la Moderna, Monterrey, N.L. | Tel.- 8183 541117</p>
+				<a href="https://www.facebook.com/profile.php?id=100057337456003" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+					Síguenos en Facebook
+				</a>
+			</div>
 		</footer>
 	</body>
 </html>
